@@ -6,8 +6,8 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Raleway';
 }
-
 
 .max-width {
     width: 100vw;
@@ -31,9 +31,8 @@ header {
 
 .header-logo p{
     color: white;
-    font-family: 'Raleway';
     text-align: center;
-
+    font-size: 2.5rem;
 }
 
 .header-logo img {
@@ -43,4 +42,89 @@ header {
 .display-center {
     display: flex;
     justify-content: center;
+}
+
+.info-block {
+    padding: 2rem 4rem;
+    font-size: 1.5rem;
+}
+
+.info-block h1 {
+    color: #CC2227;
+    margin-bottom: 1rem;
+}
+
+.info-block p {
+    margin-bottom: 2rem;
+}
+
+.login-block {
+    width: 25vw;
+}
+
+.login-block p {
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+.login-block h1{
+    font-size: 2.5rem;
+    margin: 4rem 0 2rem 0;
+    text-align: center;
+}
+
+.login-block button {
+    background-color: #CC2227;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    padding: 1rem 4rem;
+    width: 100%;
+    margin-top: 2rem;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.login {
+    background-image: url(../images/login-background.jpg);
+}
+
+.space-evenly {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button-guest {
+    background-color: #545454;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    padding: 1rem 4rem;
+    width: 25vw;
+    margin: 5rem 0;
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    background-color: black;
+}
+
+footer img{
+    margin: 2.5rem 5vw;
+}
+
+.copywriting, .design-info {
+    color: white;
+    text-align: center;
+}
+
+.design-info {
+    margin: 0.7rem 0;
+    font-size: 0.7rem;
 }
