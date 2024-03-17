@@ -11,7 +11,6 @@
 
 .max-width {
     width: 100vw;
-    max-width: 1900px;
     display: flex;
     justify-content: center;
 }
@@ -56,6 +55,7 @@ header {
 
 .info-block p {
     margin-bottom: 2rem;
+    text-align: justify;
 }
 
 .login-block {
@@ -78,7 +78,7 @@ header {
     border: none;
     border-radius: 10px;
     font-size: 1.5rem;
-    padding: 1rem 4rem;
+    padding: 1rem 0;
     width: 100%;
     margin-top: 2rem;
     text-align: center;
@@ -104,7 +104,7 @@ button:hover {
     border: none;
     border-radius: 10px;
     font-size: 1.5rem;
-    padding: 1rem 4rem;
+    padding: 1rem 0;
     width: 25vw;
     margin: 5rem 0;
     color: white;
@@ -128,3 +128,86 @@ footer img{
     margin: 0.7rem 0;
     font-size: 0.7rem;
 }
+
+@media (max-width: 1024px) {
+    .info-block {
+        font-size: 1rem;
+    }
+    
+    .login-block p {
+        font-size: 1.25rem;
+    }
+    
+    .login-block h1{
+        font-size: 1.75rem;
+        margin: 4rem 0 2rem 0;
+        text-align: center;
+    }
+
+    .button-guest, .login-block button  {
+        font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 425px) { 
+    .header-logo p{
+        font-size: 1.5rem;
+    }
+
+    .login-block p {
+        font-size: 1rem;
+    }
+    
+    .login-block h1{
+        font-size: 1.25rem;
+        margin: 4rem 0 2rem 0;
+        text-align: center;
+    }
+
+    .login-block {
+        width: 33vw;
+    }
+
+    .button-guest, .login-block button  {
+        font-size: 0.75rem;
+        width: 33vw;
+    }
+    
+    .footer-img {
+        display: block;
+        text-align: center;
+    }
+
+    .footer-img img {
+        margin: 2rem 0 0 0;
+    }
+
+    .copywriting {
+        margin-top: 2rem;
+    }
+
+    .info-block {
+        padding: 2rem;
+    }
+    
+    .button-guest {
+        margin: 2rem 0;
+    }
+  }
+
+  @media (max-width: 320px) { 
+    .login-block p {
+        font-size: 0.75rem;
+    }
+    
+    .login-block h1{
+        font-size: 1rem;
+        margin: 4rem 0 2rem 0;
+        text-align: center;
+    }
+
+    .button-guest, .login-block button  {
+        font-size: 0.6rem;
+        width: 33vw;
+    }
+  }
