@@ -76,11 +76,11 @@
                     Если Вы являетесь студентом, одного из участвующих в программе ВУЗов - войдите или пройдите
                     регистраицию по кнопке ниже.
                 </p>
-                <a href="">
-                    <button>
-                        Вход для студентов
-                    </button>
-                </a>
+
+                <button onclick="showStudentLoginBlock()">
+                    Вход для студентов
+                </button>
+
             </div>
             <div class="login-block">
                 <h1>
@@ -126,6 +126,102 @@
             </div>
         </div>
     </footer>
+    <section class="student-login-block">
+        <div class="exit-login-student" onclick="hideLoginStudent('.student-login', '.exit-login-student')">
+
+        </div>
+        <div class="student-login">
+            <div>
+                <div>
+                    <h1>Вход</h1>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Логин">
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Пароль">
+                </div>
+                <div>
+                    <p class="login-reg"
+                        onclick="showStudentRegBlock(), hideLoginStudent('.student-login', '.exit-login-student')">
+                        Нет аккаунта? Зарегестрироваться.
+                    </p>
+                    <p class="login-error">
+                        Неправильный логин или пароль.
+                    </p>
+                </div>
+                <div>
+                    <button>Войти</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="student-reg-block">
+        <div class="exit-reg-student" onclick="hideLoginStudent('.student-reg', '.exit-reg-student');">
+
+        </div>
+        <div class="student-reg">
+            <div>
+                <div>
+                    <h1>Регистрация</h1>
+                </div>
+
+                <form id="registrationForm" action="https://studentsays.ru/registration/" method="post">
+                    <div class="input-box">
+                        <select id="universities" name="university">
+                            <!-- Опции будут добавлены динамически -->
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="username" placeholder="Логин*">
+                        <div class="error-message"></div>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" name="email" placeholder="Email*">
+                        <div class="error-message"></div>
+                    </div>
+                    <div class="input-box">
+                        <input type="tel" name="phone" placeholder="Телефон*">
+                        <div class="error-message"></div>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="first_name" placeholder="Имя*">
+                        <div class="error-message"></div>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="last_name" placeholder="Фамилия*">
+                        <div class="error-message"></div>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="student_id" placeholder="Номер студенческого билета*">
+                        <div class="error-message"></div>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" name="password" placeholder="Пароль*" minlength="8">
+                        <div class="error-message"></div>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" name="confirm_password" placeholder="Повторите пароль*">
+                        <div class="error-message"></div>
+                    </div>
+                    <div>
+                        <button type="submit">Зарегистрироваться</button>
+                    </div>
+                    <div>
+                        <p class="login-reg"
+                            onclick="showStudentLoginBlock(), hideLoginStudent('.student-reg', '.exit-reg-student');">
+                            Есть аккаунт? Войти.
+                        </p>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+    </section>
 </body>
+<script src="./assets/scripts/script_index.js"></script>
 
 </html>

@@ -55,7 +55,6 @@ header {
 
 .info-block p {
     margin-bottom: 2rem;
-    text-align: justify;
 }
 
 .login-block {
@@ -64,7 +63,6 @@ header {
 
 .login-block p {
     font-size: 1.5rem;
-    text-align: justify;
 }
 
 .login-block h1{
@@ -129,7 +127,129 @@ footer img{
     font-size: 0.7rem;
 }
 
+.error {
+     border: 1px solid #CC2227; 
+}
+
+.error-message { 
+    color: #CC2227; 
+    font-size: 12px; 
+    margin: 0;
+}
+
+.exit-login-student, .exit-reg-student {
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    right: 0;
+    position: fixed;
+    background: rgba(69, 69, 69, 0.4);
+    display: none;
+}
+
+.student-login {
+    position: fixed;
+    right: -100%; 
+    top: 0; 
+    transition: right 0.5s ease-out; 
+  }
+  
+  .student-login-visible {
+    right: 0 !important; 
+    transition: right 0.5s ease-out;
+  }
+
+  .student-login-invisible {
+    right:  -100% !important; 
+  }
+  
+.student-login,.student-reg {
+    top: 0;
+    width: 35vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    right: -100%; 
+    transition: right 0.5s ease-out; 
+}
+
+.student-login input,.student-reg input, select {
+    width: 25vw;
+    background: #D9D9D9;
+    border: none;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+    padding: 1rem;
+    border-radius: 0.75rem;
+}
+
+.input-box {
+    margin-bottom: 1rem;
+}
+
+.student-login h1, .student-reg h1 {
+    font-size: 2.5rem;
+    margin: 2.5rem 0 2rem 0;
+}
+
+
+.student-login button,.student-reg button {
+    background-color: #CC2227;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    padding: 1rem;
+    width: 100%;
+    margin: 2rem 0 1rem 0;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+.student-reg {
+    overflow-y: auto;
+}
+
+.student-reg button {
+    margin: 1rem 0;
+}
+
+.login-error {
+    color: #CC2227;
+    display: none;
+}
+
+.login-reg {
+    text-decoration: underline;
+    color: #545454;
+}
+
+.login-reg:hover {
+    cursor: pointer;
+}
+
+.close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem 1rem 0 0;
+}
+
 @media (max-width: 1024px) {
+    .student-login,.student-reg {
+        width: 50vw;
+    }
+
+    .student-login input,.student-reg input {
+        width: 40vw;
+    }
+
+    .student-reg h1 {
+        font-size: 1.85rem;
+    }
+
     .info-block {
         font-size: 1rem;
     }
@@ -146,6 +266,16 @@ footer img{
 
     .button-guest, .login-block button  {
         font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .student-login,.student-reg {
+        width: 100vw;
+    }
+
+    .student-login input,.student-reg input {
+        width: 80vw;
     }
   }
 
