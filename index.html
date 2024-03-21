@@ -142,18 +142,14 @@
                     <input type="text" placeholder="Пароль">
                 </div>
                 <div>
+                    <button>Войти</button>
+                </div>
+                <div>
                     <p class="login-reg"
                         onclick="showStudentRegBlock(), hideLoginStudent('.student-login', '.exit-login-student')">
                         Нет аккаунта? Зарегестрироваться.
                     </p>
-                    <p class="login-error">
-                        Неправильный логин или пароль.
-                    </p>
                 </div>
-                <div>
-                    <button>Войти</button>
-                </div>
-
             </div>
         </div>
     </section>
@@ -171,7 +167,7 @@
                 <form id="registrationForm" action="https://studentsays.ru/registration/" method="post">
                     <div class="input-box">
                         <select id="universities" name="university">
-                            <!-- Опции будут добавлены динамически -->
+
                         </select>
                     </div>
                     <div class="input-box">
@@ -179,11 +175,11 @@
                         <div class="error-message"></div>
                     </div>
                     <div class="input-box">
-                        <input type="email" name="email" placeholder="Email*">
+                        <input type="text" name="email" placeholder="Email*">
                         <div class="error-message"></div>
                     </div>
                     <div class="input-box">
-                        <input type="tel" name="phone" placeholder="Телефон*">
+                        <input type="tel" name="phone" placeholder="Телефон*" class="tel">
                         <div class="error-message"></div>
                     </div>
                     <div class="input-box">
@@ -199,7 +195,7 @@
                         <div class="error-message"></div>
                     </div>
                     <div class="input-box">
-                        <input type="password" name="password" placeholder="Пароль*" minlength="8">
+                        <input type="password" name="password" placeholder="Пароль*">
                         <div class="error-message"></div>
                     </div>
                     <div class="input-box">
