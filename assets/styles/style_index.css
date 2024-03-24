@@ -129,14 +129,20 @@ footer img {
   font-size: 0.7rem;
 }
 
+.agreement {
+  font-size: 0.75rem;
+  width: 25vw;
+}
+
 .error {
-  border: 1px solid #cc2227;
+  border: 1px solid #cc2227 !important;
 }
 
 .error-message {
   color: #cc2227;
-  font-size: 12px;
-  margin: 0;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  display: none;
 }
 
 .exit-login-student,
@@ -237,7 +243,37 @@ select {
   margin: 1rem 1rem 0 0;
 }
 
+.reg-select {
+  position: relative;
+}
+
+.reg-select select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  z-index: 1;
+}
+
+.select-arrow {
+  position: absolute;
+  z-index: 2;
+  margin: 1.5rem 0 0 -2.5rem;
+}
+
+.close-img {
+  position: absolute;
+  right: 0;
+  margin: 2rem 4rem 0 0;
+}
+
+.close-img:hover {
+  cursor: pointer;
+}
+
 @media (max-width: 1024px) {
+  .close-img {
+    margin-right: 1.75rem;
+  }
+
   .student-login,
   .student-reg {
     width: 50vw;
@@ -246,7 +282,9 @@ select {
   .student-login input,
   .student-reg input,
   .student-login button,
-  .student-reg button {
+  .student-reg button,
+  select,
+  .agreement {
     width: 40vw;
   }
 
@@ -279,12 +317,18 @@ select {
   .student-login input,
   .student-reg input,
   .student-login button,
-  .student-reg button {
+  .student-reg button,
+  select,
+  .agreement {
     width: 80vw;
   }
 }
 
 @media (max-width: 425px) {
+  .close-img {
+    margin-right: 0.75rem;
+  }
+
   .header-logo p {
     font-size: 1.5rem;
   }
@@ -333,7 +377,8 @@ select {
   .student-login button,
   .student-reg button,
   .student-login input,
-  .student-reg input {
+  .student-reg input,
+  select {
     font-size: 1rem;
   }
 
@@ -343,6 +388,10 @@ select {
 }
 
 @media (max-width: 320px) {
+  .close-img {
+    margin: 1.5rem 0.5rem 0 0;
+  }
+
   .login-block p {
     font-size: 0.75rem;
   }

@@ -7,9 +7,9 @@
     <title>StudentSays</title>
     <link rel="stylesheet" href="./assets/styles/style_index.css">
 
-    <head>
-        <link rel="shortcut icon" href="./assets/images/favicon-32x32.png" type="image/x-icon">
-    </head>
+
+    <link rel="shortcut icon" href="./assets/images/favicon-32x32.png" type="image/x-icon">
+
 </head>
 
 <body>
@@ -98,7 +98,7 @@
             </div>
         </div>
         <div class="display-center">
-            <a href="">
+            <a href="./main.html">
                 <button class="button-guest">
                     Войти как гость
                 </button>
@@ -132,6 +132,10 @@
         </div>
         <div class="student-login">
             <div>
+                <div class="close-img">
+                    <img src="./assets/images/close.svg" alt="close"
+                        onclick="hideLoginStudent('.student-login', '.exit-login-student')">
+                </div>
                 <div>
                     <h1>Вход</h1>
                 </div>
@@ -160,48 +164,55 @@
         </div>
         <div class="student-reg">
             <div>
+                <div class="close-img">
+                    <img src="./assets/images/close.svg" alt="close"
+                        onclick="hideLoginStudent('.student-reg', '.exit-reg-student');">
+                </div>
                 <div>
                     <h1>Регистрация</h1>
                 </div>
-
                 <form id="registrationForm" action="https://studentsays.ru/registration/" method="post">
-                    <div class="input-box">
+                    <div class="input-box reg-select">
                         <select id="universities" name="university">
+                            <option selected="true" disabled="disabled">Выберите ВУЗ</option>
 
                         </select>
+                        <img src="./assets/images/select-arrow.svg" alt="arrow" class="select-arrow">
                     </div>
                     <div class="input-box">
-                        <input type="text" name="username" placeholder="Логин*">
-                        <div class="error-message"></div>
+                        <input class="input-el" type="text" name="username" placeholder="Логин*">
                     </div>
                     <div class="input-box">
-                        <input type="text" name="email" placeholder="Email*">
-                        <div class="error-message"></div>
+                        <input class="input-el" type="text" name="email" placeholder="Email*">
                     </div>
                     <div class="input-box">
-                        <input type="tel" name="phone" placeholder="Телефон*" class="tel">
-                        <div class="error-message"></div>
+                        <input class="input-el" class="input-el" type="tel" name="phone" placeholder="Телефон*"
+                            class="tel">
                     </div>
                     <div class="input-box">
-                        <input type="text" name="first_name" placeholder="Имя*">
-                        <div class="error-message"></div>
+                        <input class="input-el" class="input-el" type="text" name="first_name" placeholder="Имя*">
                     </div>
                     <div class="input-box">
-                        <input type="text" name="last_name" placeholder="Фамилия*">
-                        <div class="error-message"></div>
+                        <input class="input-el" type="text" name="last_name" placeholder="Фамилия*">
                     </div>
                     <div class="input-box">
-                        <input type="text" name="student_id" placeholder="Номер студенческого билета*">
-                        <div class="error-message"></div>
+                        <input class="input-el" type="text" name="student_id" placeholder="Номер студенческого билета*">
                     </div>
                     <div class="input-box">
-                        <input type="password" name="password" placeholder="Пароль*">
-                        <div class="error-message"></div>
+                        <input class="input-el" type="password" name="password" placeholder="Пароль*">
                     </div>
                     <div class="input-box">
-                        <input type="password" name="confirm_password" placeholder="Повторите пароль*">
-                        <div class="error-message"></div>
+                        <input class="input-el" type="password" name="confirm_password" placeholder="Повторите пароль*">
                     </div>
+                    <div>
+                        <p class="agreement">
+                            Продолжая регистрацию, я соглашаюсь с <a href="">Правилами пользования сайтом и
+                                обработки
+                                персональных
+                                данных</a>
+                        </p>
+                    </div>
+                    <div class="error-message">Проверьте правильность заполнения полей</div>
                     <div>
                         <button type="submit">Зарегистрироваться</button>
                     </div>

@@ -131,19 +131,18 @@ window.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("registrationForm");
   form.addEventListener("submit", function (e) {
-    e.preventDefault(); // Предотвращаем стандартную отправку формы
+    e.preventDefault();
 
-    // Сброс предыдущих ошибок
-    const errorMessages = document.querySelectorAll(".error-message");
-    errorMessages.forEach((message) => {
-      message.innerText = "";
-    });
+    const errorMessages = document.querySelector(".error-message");
+    console.log(errorMessages);
+    errorMessages.style.display = "none";
 
-    const inputs = form.querySelectorAll(".input-box input");
+    const inputs = form.querySelectorAll(".input-el");
     inputs.forEach((input) => {
       input.classList.remove("error"); // Удаляем предыдущие красные рамки
     });
 
+    console.log(inputs);
     let isValid = true; // Флаг, отслеживающий валидность формы
 
     // Валидация каждого поля
@@ -210,8 +209,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  function displayError(input, errorElement, message) {
+  function displayError(input) {
+    const errorMessages = document.querySelector(".error-message");
+    console.log(errorMessages);
     input.classList.add("error"); // Добавляем красную рамку
-    errorElement.innerText = message; // Отображаем сообщение об ошибке
+    errorMessages.style.display = "block";
   }
 });
