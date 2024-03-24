@@ -78,6 +78,7 @@ header img {
   background-color: white;
   border-radius: 1rem;
   width: 55vw;
+  max-width: 800px;
   margin: 2rem 2rem 2rem 5rem;
   padding: 2rem;
 }

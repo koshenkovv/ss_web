@@ -85,3 +85,58 @@ document.addEventListener("DOMContentLoaded", function () {
     errorElement.innerText = message; // Отображаем сообщение об ошибке
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("loginForm");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const errorMessages = document.querySelector(".error-message");
+    console.log(errorMessages);
+    errorMessages.style.display = "none";
+
+    const inputs = form.querySelectorAll(".input-el");
+    inputs.forEach((input) => {
+      input.classList.remove("error"); // Удаляем предыдущие красные рамки
+    });
+
+    console.log(inputs);
+    let isValid = true; // Флаг, отслеживающий валидность формы
+
+    // Валидация каждого поля
+    inputs.forEach((input) => {
+      const errorMessageElement = input.nextElementSibling;
+      if (input.name === "username" && !input.value.match(/^[a-zA-Z0-9]+$/)) {
+        displayError(input, errorMessageElement, "Некорректный логин");
+        isValid = false;
+      } else if (
+        input.name === "password" &&
+        (input.value.length < 8 ||
+          !input.value.match(/[a-zA-Z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/))
+      ) {
+        displayError(input, errorMessageElement, "Некорректный пароль");
+        isValid = false;
+      } else if (!input.value.trim()) {
+        displayError(
+          input,
+          errorMessageElement,
+          "Это поле необходимо заполнить"
+        );
+        isValid = false;
+      }
+    });
+
+    // Если форма валидна, можно отправить данные
+    if (isValid) {
+      // Отправка формы, например, через fetch API или XMLHttpRequest
+      console.log("Форма валидна. Отправляем данные...");
+    }
+  });
+
+  function displayError(input) {
+    const errorMessages = document.querySelector(".error-message");
+    console.log(errorMessages);
+    input.classList.add("error"); // Добавляем красную рамку
+    errorMessages.style.display = "block";
+  }
+});

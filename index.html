@@ -139,15 +139,18 @@
                 <div>
                     <h1>Вход</h1>
                 </div>
-                <div class="input-box">
-                    <input type="text" placeholder="Логин">
-                </div>
-                <div class="input-box">
-                    <input type="text" placeholder="Пароль">
-                </div>
-                <div>
-                    <button>Войти</button>
-                </div>
+                <form id="loginForm" action="https://studentsays.ru/login/" method="post">
+                    <div class="input-box">
+                        <input class="input-el" name="username" type="text" placeholder="Логин">
+                    </div>
+                    <div class="input-box">
+                        <input class="input-el" name="password" type="text" placeholder="Пароль">
+                    </div>
+                    <div class="error-message">Проверьте правильность заполнения полей</div>
+                    <div>
+                        <button type="submit">Войти</button>
+                    </div>
+                </form>
                 <div>
                     <p class="login-reg"
                         onclick="showStudentRegBlock(), hideLoginStudent('.student-login', '.exit-login-student')">
@@ -186,11 +189,10 @@
                         <input class="input-el" type="text" name="email" placeholder="Email*">
                     </div>
                     <div class="input-box">
-                        <input class="input-el" class="input-el" type="tel" name="phone" placeholder="Телефон*"
-                            class="tel">
+                        <input class="input-el" type="tel" name="phone" placeholder="Телефон*" class="tel">
                     </div>
                     <div class="input-box">
-                        <input class="input-el" class="input-el" type="text" name="first_name" placeholder="Имя*">
+                        <input class="input-el" type="text" name="first_name" placeholder="Имя*">
                     </div>
                     <div class="input-box">
                         <input class="input-el" type="text" name="last_name" placeholder="Фамилия*">
