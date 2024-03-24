@@ -269,6 +269,23 @@ select {
   cursor: pointer;
 }
 
+.password-box {
+  position: relative;
+}
+
+.password-box img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 2rem;
+  width: 2rem;
+  margin: 1rem;
+}
+
+.password-box img:hover {
+  cursor: pointer;
+}
+
 @media (max-width: 1024px) {
   .close-img {
     margin-right: 1.75rem;
@@ -384,6 +401,12 @@ select {
 
   .login-reg {
     font-size: 0.75rem;
+  }
+
+  .password-box img {
+    height: 2rem;
+    width: 2rem;
+    margin-top: 0.5rem;
   }
 }
 
