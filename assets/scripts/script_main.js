@@ -47,3 +47,14 @@ document.addEventListener("DOMContentLoaded", function () {
   // Добавить обработчик события при изменении выбранной опции
   selectElement.addEventListener("change", changeImage);
 });
+
+function switchComments() {
+  var comments = document.querySelector(".appeal-comments");
+
+  if (comments) {
+    // Переключаем класс visible, чтобы управлять видимостью и анимацией
+    comments.classList.toggle("visible");
+  } else {
+    console.error("Элемент с классом appeal-comments не найден.");
+  }
+}
