@@ -586,6 +586,24 @@ header {
   font-size: 1.3rem;
 }
 
+.descktop-image-show {
+  display: none;
+  justify-content: center;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(69, 69, 69, 0.4);
+}
+
+.descktop-image-show img {
+  margin-top: 5rem;
+  width: 70%;
+  height: fit-content;
+}
+
 @media (max-width: 1024px) {
   .university-block {
     width: 80%;
