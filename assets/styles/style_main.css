@@ -42,7 +42,7 @@ header {
   /* background-color: beige; */
   max-width: 1280px;
   width: 100%;
-  padding: 2rem 0rem;
+  padding: 1.25rem 0rem;
   display: flex;
   justify-content: space-between;
 }
@@ -63,7 +63,7 @@ header {
   height: 2rem;
 }
 
-.header-bell {
+.header-raiting {
   margin: 0 2rem;
 }
 
@@ -96,7 +96,7 @@ header {
 }
 
 .sort-block {
-  margin: 8rem 5rem 2rem 5rem;
+  margin: 7rem 5rem 0rem 5rem;
 }
 
 .add-appeal-mobile {
@@ -154,6 +154,14 @@ header {
   margin-bottom: 2rem;
 }
 
+.appeal-buttons img {
+  height: 1.5rem;
+}
+
+.appeal-section {
+  min-height: 800px;
+}
+
 .comments-img {
   margin: 0 1rem;
 }
@@ -171,6 +179,7 @@ header {
 }
 
 .university-img h1 {
+  font-size: 1.25rem;
   margin: 1rem;
   bottom: 0;
   position: absolute;
@@ -205,7 +214,7 @@ header {
 }
 
 .best-appeals h1 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-bottom: 1.25rem;
 }
 
@@ -248,9 +257,13 @@ header {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   position: fixed;
   bottom: 0;
+}
+
+.mobile-header img {
+  height: 2rem;
 }
 
 .mobile-sort {
@@ -344,8 +357,18 @@ header {
   }
 }
 @media (max-width: 425px) {
-  .mobile-header img {
-    height: 2rem;
+  .mobile-appeal-header,
+  .mobile-appeal-rating {
+    font-size: 1rem;
+  }
+
+  .mobile-appeal-author,
+  .mobile-appeal-date {
+    font-size: 0.75rem;
+  }
+
+  .mobile-appeal-rating-image {
+    height: 1rem;
   }
 }
 
