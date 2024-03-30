@@ -63,7 +63,7 @@ header {
   height: 2rem;
 }
 
-.header-raiting {
+.header-rating {
   margin: 0 2rem;
 }
 
@@ -134,6 +134,11 @@ header {
   border-radius: 1rem;
   margin: 2rem 2rem 2rem 5rem;
   padding: 2rem;
+}
+
+.appeal-rating {
+  font-size: 1.25rem;
+  margin-right: 0.5rem;
 }
 
 .appeal-header-navigation img {
@@ -229,7 +234,7 @@ header {
 }
 
 .appeal-images-block-4 {
-  display: grid;
+  display: none;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   padding: 0 1rem 2rem 1rem;
@@ -586,7 +591,7 @@ header {
   font-size: 1.3rem;
 }
 
-.descktop-image-show {
+.desktop-image-show {
   display: none;
   justify-content: center;
   z-index: 100;
@@ -598,7 +603,7 @@ header {
   background-color: rgba(69, 69, 69, 0.4);
 }
 
-.descktop-image-show img {
+.desktop-image-show img {
   margin-top: 5rem;
   width: 70%;
   height: fit-content;
@@ -632,7 +637,7 @@ header {
 }
 
 @media (max-width: 768px) {
-  .descktop-view {
+  .desktop-view {
     display: none;
   }
 

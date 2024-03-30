@@ -65,7 +65,7 @@ header {
     </div>
     <div>
         <a href="">
-            <img src="./assets/images/raiting.svg" alt="raiting">
+            <img src="./assets/images/rating.svg" alt="rating">
         </a>
         <a href="" class="header-bell">
             <img src="./assets/images/bell.svg" alt="notifications">

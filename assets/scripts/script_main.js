@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var selectedValue = selectElement.value;
 
     // Путь к изображениям
-    var imagePath = "./assets/images/";
+    var imagePath = "/media/images/";
 
     // Выбор изображения в зависимости от выбранного значения
     if (selectedValue === "1" || selectedValue === "3") {
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var selectedValue = selectElement.value;
 
     // Путь к изображениям
-    var imagePath = "./assets/images/";
+    var imagePath = "/media/images/";
 
     // Выбор изображения в зависимости от выбранного значения
     if (selectedValue === "1" || selectedValue === "3") {

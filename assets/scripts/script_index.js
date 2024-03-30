@@ -249,14 +249,13 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Начало отправки формы");
 
     const errorMessages = document.querySelector(".error-message");
-    console.log("Сообщения об ошибках:", errorMessages);
     errorMessages.style.display = "none";
 
     const inputs = form.querySelectorAll(".input-el");
-    console.log("Поля формы:", inputs);
     inputs.forEach((input) => {
       input.classList.remove("error"); // Удаляем предыдущие красные рамки
     });
+
     let isValid = true; // Флаг, отслеживающий валидность формы
 
     // Валидация каждого поля
@@ -284,44 +283,51 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (isValid) {
       console.log("Форма валидна. Отправляем данные...");
-      console.log("Данные формы:", new FormData(form));
 
       fetch(form.action, {
         method: "POST",
         body: new FormData(form),
-        headers: {
-          "X-Requested-With": "XMLHttpRequest",
-          "X-CSRFToken": getCookie("csrftoken"), // Убедитесь, что функция getCookie реализована
-        },
       })
-        .then((response) => {
-          console.log("Ответ сервера (response):", response);
-          return response.json();
-        })
+        .then((response) => response.json()) // Преобразование ответа в JSON
         .then((data) => {
-          console.log("Данные, полученные от сервера:", data);
-          if (
-            !data.error &&
-            data.data &&
-            data.data.refresh &&
-            data.data.access
-          ) {
-            alert("Вы успешно вошли в систему!");
+          console.log("Ответ сервера:", data); // Логирование ответа сервера для отладки
+
+          if (data && !data.data.error && data.data) {
+            window.location.href = "/main";
+
+            if (typeof data.data.refresh !== "undefined") {
+              localStorage.setItem("refresh_token", data.data.refresh);
+            }
+
+            if (typeof data.data.access !== "undefined") {
+              localStorage.setItem("access_token", data.data.access);
+            }
+
+            if (typeof data.data.role !== "undefined") {
+              localStorage.setItem("role", data.data.role);
+            }
+
+            if (typeof data.data.userId !== "undefined") {
+              localStorage.setItem("userId", data.data.userId.toString()); // Приведение к строке
+            }
           } else {
-            alert(data.error || "Произошла неизвестная ошибка");
+            alert(data.data.error || "Произошла неизвестная ошибка");
           }
         })
-        .catch((error) => console.error("Ошибка:", error));
+        .catch((error) => {
+          console.error("Ошибка:", error); // Логирование ошибки для отладки
+          displayError(input, errorMessageElement, "Неверный логин или пароль");
+        });
     }
   });
 
   function displayError(input, errorMessageElement, errorMessage) {
-    console.log("Ошибка валидации:", errorMessage);
+    console.log("Ошибка валидации:", errorMessage); // Логирование ошибки валидации для отладки
     const errorMessages = document.querySelector(".error-message");
     input.classList.add("error");
     errorMessages.style.display = "block";
     if (errorMessageElement) {
-      errorMessageElement.innerText = errorMessage; // Убедитесь, что errorMessageElement существует и может отображать текст ошибки
+      errorMessageElement.innerText = errorMessage;
     }
   }
 });
@@ -354,7 +360,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Изменение изображения иконки
     passwordIcon.src =
       type === "password"
-        ? "./assets/images/open-eye.svg"
-        : "./assets/images/close-eye.svg";
+        ? "/media/images/open-eye.svg"
+        : "/media/images/close-eye.svg";
   });
 });

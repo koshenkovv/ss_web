@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
+    <title id="header">Главная</title>
     <link rel="shortcut icon" href="./assets/images/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/styles/style_main.css">
 </head>
 
 <body>
-    <section class="descktop-view">
+    <section class="desktop-view">
         <header>
             <div class="header">
                 <div class="header-logo"><a href=""><img class="big-logo" src="./assets/images/header_white_logo.svg"
@@ -29,8 +29,8 @@
                     <a href="">
                         <img src="./assets/images/bell.svg" alt="notifications">
                     </a>
-                    <a href="" class="header-raiting">
-                        <img src="./assets/images/raiting.svg" alt="raiting">
+                    <a href="" class="header-rating">
+                        <img src="./assets/images/rating.svg" alt="rating">
 
                     </a>
                     <a href="">
@@ -60,8 +60,8 @@
                             <section class="appeal-block">
                                 <div class="space-between">
                                     <div class="appeal-header">
-                                        <h1>Заявка заявка заявка</h1>
-                                        <p>
+                                        <h1 id="header">Заявка заявка заявка</h1>
+                                        <p id="username">
                                             Анонимный студент
                                         </p>
                                     </div>
@@ -72,7 +72,7 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <p class="appeal-text">
+                                    <p class="appeal-text" id="text">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                         tempor
                                         incididunt ut
@@ -157,11 +157,19 @@
                                     <div onclick="showImage(event)" class="appeal-images-block-5-5"> </div>
                                 </div>
 
-                                <div class="appeal-buttons">
-                                    <img src="./assets/images/dark-grey-fire.svg" alt="rate-up">
-                                    <img src="./assets/images/comments.svg" onclick="switchComments() " alt="comments"
-                                        class="comments-img">
-                                    <img src="./assets/images/link.svg" alt="share">
+                                <div class="space-between">
+                                    <div class="appeal-buttons display-flex">
+                                        <p id="rating" class="appeal-rating">123</p>
+                                        <img src="./assets/images/dark-grey-fire.svg" alt="rate-up">
+                                        <img src="./assets/images/comments.svg" onclick="switchComments() "
+                                            alt="comments" class="comments-img">
+                                        <img src="./assets/images/link.svg" alt="share">
+                                    </div>
+                                    <div>
+                                        <p id="date_created">
+                                            10.10.2010 10:46
+                                        </p>
+                                    </div>
                                 </div>
 
                                 <div class="appeal-comments">
@@ -258,7 +266,7 @@
             </div>
         </section>
     </section>
-    <div class="descktop-image-show " onclick="switchImageShow()">
+    <div class="desktop-image-show " onclick="switchImageShow()">
         <img src="./assets/images/index_header.png" alt="img" id="imageShowcase">
     </div>
     <section class="mobile-view">
@@ -270,7 +278,7 @@
                 <img src="./assets/images/bell.svg" alt="bell">
             </div>
             <div>
-                <img src="./assets/images/raiting.svg" alt="raiting">
+                <img src="./assets/images/rating.svg" alt="rating">
             </div>
             <div>
                 <img src="./assets/images/profile.png" alt="profile">
@@ -371,6 +379,9 @@
         </section>
     </section>
 </body>
+<script src="./assets/scripts/script_logout.js"></script>
+<!-- <script src="./assets/scripts/script_validation.js"></script> -->
 <script src="./assets/scripts/script_main.js"></script>
+<script src="./assets/scripts/script_appeal.js"></script>
 
 </html>
